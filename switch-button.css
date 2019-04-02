@@ -1,0 +1,30 @@
+/* thuộc tính appearance làm cho các thuộc tính ban đầu của element bị reset trở lại nguyên thủy*/
+.switch{
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 42px;
+    height: 24px;
+    background-color: #c6c6c6;
+    border-radius: 30px;
+    outline: none;
+    position: relative;
+    border: 1px solid rgb(148, 145, 145);
+}
+
+.switch::before{
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: absolute;    
+    border-radius: 50%;
+    background-color: #fdfdfd;
+}
+
+.switch:checked{
+    background-color: mediumseagreen;
+    border: 1px solid mediumseagreen;
+}
+
+.switch:checked:before{  
+    left: 17px;
+}
