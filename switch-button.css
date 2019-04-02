@@ -9,6 +9,7 @@
     outline: none;
     position: relative;
     border: 1px solid rgb(148, 145, 145);
+    transition: 200ms;
 }
 
 .switch::before{
@@ -18,6 +19,7 @@
     position: absolute;    
     border-radius: 50%;
     background-color: #fdfdfd;
+    transition: 200ms;
 }
 
 .switch:checked{
