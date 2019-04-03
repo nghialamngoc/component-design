@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../csss/button-ripple.css">
+  </head>
+  <body>
+		<button>Button ripple 1</button>
+		<button>Button ripple 2</button>
+	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+
+			var button1 = document.querySelector("button:nth-child(1)");
+			var button2 = document.querySelector("button:nth-child(2)");
+			var hover = true;
+
+			button1.addEventListener("click", () => {				
+				let ripple2 = document.createElement("div");
+				let x,y;										
+
+				x = event.clientY - button1.offsetTop;
+				y = event.clientX - button1.offsetLeft;
+				ripple2.classList.add("ripple2");
+				ripple2.style.top = x + "px";
+				ripple2.style.left = y + "px";
+				button1.appendChild(ripple2);
+			});			
+			
+			button2.addEventListener("mousemove", () => {
+				if(hover){
+					hover = false;
+					addRipple(event, button2);
+					setTimeout(function(){
+						hover = true;
+					}, 100)
+				}
+				
+			});
+
+			function addRipple(event, button){
+				let ripple1 = document.createElement("div");
+				let x,y;										
+
+				x = event.clientY - button.offsetTop;
+				y = event.clientX - button.offsetLeft;
+				ripple1.classList.add("ripple1");
+				ripple1.style.top = x + "px";
+				ripple1.style.left = y + "px";
+				button.appendChild(ripple1);
+					
+			}
+
+		})
+	</script>
+</html>
