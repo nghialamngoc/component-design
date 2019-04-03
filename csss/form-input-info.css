@@ -1,0 +1,92 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+.form-input-information {	
+	background-color: rgb(196, 190, 190);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-input-information form{
+	background-color: white;
+	border: 1px solid rgb(204, 200, 200);
+	border-radius: 15px;
+	padding: 16px 16px;
+	position: relative;
+	box-shadow: 4px 3px 5px gray;
+	text-shadow: 0.4px 0.4px 2px #bbb2b2;
+	color: #ffa575;
+}
+
+.form-input-information .logo-header{
+	width: 90px;
+	height: 90px;
+	background: rgb(255,138,135);
+background: -moz-linear-gradient(90deg, rgba(255,138,135,1) 0%, rgba(255,165,117,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(255,138,135,1) 0%, rgba(255,165,117,1) 100%);
+background: linear-gradient(90deg, rgba(255,138,135,1) 0%, rgba(255,165,117,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8a87",endColorstr="#ffa575",GradientType=1);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.form-input-information i{
+	font-size: 50px;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+.form-input-information form h2{
+	text-align: center;
+	margin-top: 35px;
+}
+
+.form-input-information form .input-group, .form-input-information form textarea{
+	font-size: 1.1rem;
+	font-weight: 500;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.form-input-information form .input-group input[type="text"]{
+	border: none;
+	background-color: #efeeee;
+	display: inline-block;
+	width: 70%;
+	outline: none;
+	padding: 3px 0;
+	font-size: 1rem;
+	font-weight: 500;
+	border-top-right-radius: 10px;
+}
+
+.form-input-information form button{
+	width: 5rem;
+	height: 2rem;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	font-size: 1em;
+	color: rgb(245, 245, 245);
+	font-weight: 600;
+	background: rgb(66,217,175);
+background: -moz-linear-gradient(90deg, rgba(66,217,175,1) 0%, rgba(175,219,207,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(66,217,175,1) 0%, rgba(175,219,207,1) 100%);
+background: linear-gradient(90deg, rgba(66,217,175,1) 0%, rgba(175,219,207,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#42d9af",endColorstr="#afdbcf",GradientType=1);
+}
