@@ -1,0 +1,93 @@
+- .class
+- #id
+- p
+- div, p, span
+
+****************************************************
+
+- div p => chọn toàn bộ thẻ <p> tìm thấy trong <div>
+
+lưu ý: miễn là thẻ <p> truy ngược ra cho tới gốc cuối cùng mà gặp thẻ <div> thì sẽ được chọn
+
+***********************************************************
+
+- div > p => chọn toàn bộ thẻ <p> là con trực tiếp của thẻ div
+
+*************************************************
+
+- div + p => chọn thẻ <p> ngay sau thẻ div ( không phải là con của div, kết thúc thẻ div là tới ngay thẻ p)
+
+---------------------------
+
+<div class="div1"></div>
+
+<p>Hello baby</p> => được chọn
+
+-------------------------
+
+<div class="div1"></div>
+
+<h2>Hello</h2> 
+<p>Hello baby 2</p> => không được chọn
+
+*************************************************
+
+- div ~ p => chọn tất cả thẻ p được đặt sau một thẻ div đầu tiên tìm thấy (từ vị trí tìm thấy thẻ div đầu tiên. tất cả thẻ p nhìn thấy sau đó sẽ được chọn)
+
+<div class="div1"></div>
+
+<h2>Hello</h2>  
+<p>Hello baby</p> => được chọn
+<p>Hello baby 2</p> => được chọn
+
+*************************************************
+
+[attribute] => chọn tất cả các thẻ có attribute được chỉ định
+
+---------------------------------------
+
+[src]{
+
+} => chọn tất cả thẻ có attribute là src
+
+***************************************************
+
+[src="./hinh.jpg"] chọn tất cả thẻ có attribute src với giá trị là "./hinh.jpg"
+
+*****************************************************
+
+[src~="value"] chọn tất cả các thẻ có giá trị src có value chứa giá trị của value
+
+***********************************************************
+
+[src|="value"] chọn tất cả các thẻ có giá trị src có value bắt đầu = value và cách nhau bằng dấu -
+
+[class|="top"] {
+  background: yellow;
+}
+
+<h1 class="top header">Welcome</h1>
+<p class="top-text">Hello world!</p>
+<p class="topcontent">Are you learning CSS?</p>
+
+************************************************************
+
+a[href^="value"] chọn tất cả các thẻ a có attribute href bắt đầu bằng "chuỗi" value
+
+[title^="tex"]{
+  color:red;
+}
+
+<p title="text chơi">AAA</p> => chọn
+
+<p title="tex chơi">Hello baby</p> => chọn
+<h2>Hello</h2> 
+<p>Hello baby 2</p>
+
+**********************************************************
+
+[attribute$="value value2"] chọn tất cả các thẻ có thuộc tính attribute và kết thúc là chuỗi value1 value2
+
+************************************************************
+
+[attribute*="value1 value2"] chọn tất cả các thẻ có thuộc tính attribute và chứa chuỗi value1 value2
