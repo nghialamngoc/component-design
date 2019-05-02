@@ -10,10 +10,17 @@
   <body>
 		<button>Button ripple 1</button>
 		<button>Button ripple 2</button>
+		<button onclick="windowPrint()">Print</button>
 	</body>
 	<script>
-		document.addEventListener("DOMContentLoaded", function(){
+		
 
+		document.addEventListener("DOMContentLoaded", function(){
+			function windowPrint(){
+			alert("vao day");
+			window.print();
+		}
+			
 			var button1 = document.querySelector("button:nth-child(1)");
 			var button2 = document.querySelector("button:nth-child(2)");
 			var hover = true;
