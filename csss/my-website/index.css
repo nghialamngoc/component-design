@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 a, a:hover{
   text-decoration: none;
   color: white;
@@ -5,17 +11,18 @@ a, a:hover{
 
 .content-left{     
   background-color: #252525;
+  height: 100vh;
   color: white;
 }
 
-.content{
-  height: 200vh;
-  border: 1px solid blue;
+.content-right{
+  background-color: #d5d2d2;
 }
 
 .sidebar{
   position: fixed;
   top: 0;
+  background-color: #252525;
   height: 100vh;
   width: 15%;
 }
@@ -69,8 +76,79 @@ a, a:hover{
   color:#F47631;
 }
 
-@media (max-width: 991px) {
+/*CSS list posts*/
+.list-posts{
+  margin-top: 80px;
+  padding: 0px 40px;
+}
 
+.list-posts p::selection, .list-posts span::selection{
+  background-color: #33A1B1;
+}
+
+.list-posts a{
+  color: black;
+}
+
+.list-posts a:hover{
+  color: #33A1B1;
+}
+
+.post{
+  border-bottom: 1px solid #d5d2d2;
+  padding-bottom: 40px;
+}
+
+.post-header{
+  font-size: 2.1em;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.post-short-content{
+  font-size: 1.2em;
+}
+
+.create-date{
+  font-size: 0.9em;
+  margin-right: 5px;
+}
+
+.tags{
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.badge{
+  background-color:#e2e2e2;
+  font-weight: 500;
+  padding: 2px 12px 2px 18px;
+  position: relative;
+}
+
+.badge::before{
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #33A1B1;
+  position: absolute;
+  top: 31%;
+  
+  left: 4%;
+}
+/* End CSS list posts*/
+
+@media (max-width: 991px) {
+  .content-left{
+    height: auto;
+  }
+
+  .content-right{
+    display: none;
+  }
+  
   .sidebar{
     position: relative;
     width: 100%;
