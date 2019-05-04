@@ -11,12 +11,12 @@ a, a:hover{
 
 .content-left{     
   background-color: #252525;
-  height: 100vh;
-  color: white;
+  height: auto;
+  color: white;  
 }
 
 .content-right{
-  background-color: #d5d2d2;
+  background-color: #f6f6f6;
 }
 
 .sidebar{
